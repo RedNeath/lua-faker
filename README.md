@@ -10,7 +10,7 @@ Faker is heavily inspired by PHP Faker, Perl Faker, Ruby Faker and by Python Fak
 The default **locale** is `en_US`. Every function that uses a lazy initialization need to be called with `:`:
 
 ```lua
-local Faker = require('faker')
+local Faker = require('fast-faker')
 
 local faker = Faker:new()
 for i = 1, 10 do
@@ -34,7 +34,33 @@ end
 -- 983-77-4987
 ```
 
-> Pay attention because `faker.ssn` only exists when `en_US` is loaded.
+### Name
+The name function generates a couple `<firstname> <surname>`. It takes a table as parameter, which can contain the key `gender`, with a value of:
+- `'masculine'` for masculine firstnames;
+- or `'feminine'` for feminine firstnames.
+
+### Surname
+The surname function generates a surname.
+
+### Firstname
+The firstname function generates a first name. It takes a table as parameter, which can contain the key `gender`, with a value of:
+- `'masculine'` for masculine first names;
+- or `'feminine'` for feminine first names.
+
+### Email
+The email function generates a string in the format `<firstname>.<surname>@example.com`. It takes a table as parameter, which can contain the key `gender`, with a value of:
+- `'masculine'` for masculine firstnames;
+- or `'feminine'` for feminine firstnames.
+
+### City
+The city function generates a city name.
+
+### State
+The state function generates a state name.
+
+### Country
+The country function generates a country name.
+
 
 ## Locales
 
