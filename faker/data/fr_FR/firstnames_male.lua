@@ -304,7 +304,7 @@ return {
 'Muhammed',
 'Muhammed-Ali',
 'Mylann',
-'N'Famoussa',
+'N\'Famoussa',
 'Nacim',
 'Naël',
 'Nahil Bernard',

@@ -3,7 +3,7 @@
 
 local Faker = {}
 
-math.randomseed(os.clock() * 100000000000)
+math.randomseed(math.ceil(os.clock() * 100000000000))
 local random = math.random
 
 function Faker:new(o)
@@ -40,7 +40,7 @@ end
 function Faker:firstname(properties)
 	-- Very sus code here
 	--
-	
+
 	self.firstnames = {{}, {}}
 		-- 1 - feminine
 	self.firstnames[1] = require('fast-faker.data.' .. self.locale .. '.firstnames_female')
