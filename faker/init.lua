@@ -1,4 +1,4 @@
--- faker.lua
+-- init.lua
 -- Generates random names, emails, numbers and etc
 
 local Faker = {}
@@ -8,7 +8,7 @@ local random = math.random
 
 function Faker:new(o)
 	o = o or {locale = 'en_US'}
-	local generator = require('faker.generators.' .. o.locale)
+	local generator = require('fast-faker.generators.' .. o.locale)
 	for k, v in pairs(generator) do
 		o[k] = v
 	end
@@ -38,11 +38,14 @@ function Faker.randint(size)
 end
 
 function Faker:firstname(properties)
+	-- Very sus code here
+	--
+	
 	self.firstnames = {{}, {}}
 		-- 1 - feminine
-	self.firstnames[1] = require('faker.data.' .. self.locale .. '.firstnames_female')
+	self.firstnames[1] = require('fast-faker.data.' .. self.locale .. '.firstnames_female')
 	-- 2 - masculine
-	self.firstnames[2] = require('faker.data.' .. self.locale .. '.firstnames_male')
+	self.firstnames[2] = require('fast-faker.data.' .. self.locale .. '.firstnames_male')
 	function self:firstname(properties)
 		properties = properties or {}
 		local gender = 1
@@ -57,7 +60,7 @@ function Faker:firstname(properties)
 end
 
 function Faker:surname()
-	self.surnames = require('faker.data.' .. self.locale .. '.surnames')
+	self.surnames = require('fast-faker.data.' .. self.locale .. '.surnames')
 	function self:surname()
 		return self.surnames[math.random(1, #self.surnames)]
 	end
@@ -74,7 +77,7 @@ function Faker:email(properties)
 end
 
 function Faker:country()
-	self.countries = require('faker.data.' .. self.locale .. '.countries')
+	self.countries = require('fast-faker.data.' .. self.locale .. '.countries')
 	function self:country()
 		return self.countries[math.random(1, #self.countries)]
 	end
@@ -82,7 +85,7 @@ function Faker:country()
 end
 
 function Faker:state()
-	self.states = require('faker.data.' .. self.locale .. '.states')
+	self.states = require('fast-faker.data.' .. self.locale .. '.states')
 	function self:state()
 		return self.states[math.random(1, #self.states)]
 	end
@@ -90,7 +93,7 @@ function Faker:state()
 end
 
 function Faker:city()
-	self.cities = require('faker.data.' .. self.locale .. '.cities')
+	self.cities = require('fast-faker.data.' .. self.locale .. '.cities')
 	function self:city()
 		return self.cities[math.random(1, #self.cities)]
 	end
