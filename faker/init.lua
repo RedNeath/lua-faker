@@ -73,7 +73,9 @@ end
 
 function Faker:email(properties)
 	local username = self:firstname(properties) .. '.' .. string.gsub(self:surname(), '%s+', '')
-	return string.gsub(string.lower(self.normalize(username)), "'", '') .. '@example.com'
+	local domain_name = self:company()
+	local tld = self:tld()
+	return string.gsub(string.lower(self.normalize(username)), "'", '') .. '@' .. string.gsub(string.lower(self.normalize(domain_name)), "'", '') '.' .. tld
 end
 
 function Faker:country()
@@ -98,6 +100,22 @@ function Faker:city()
 		return self.cities[math.random(1, #self.cities)]
 	end
 	return self:city()
+end
+
+function Faker:company()
+	self.companies = require('fast-faker.data.' .. self.locale .. '.companies')
+	function self:company()
+		return self.companies[math.random(1, #self.companies)]
+	end
+	return self:company()
+end
+
+function Faker:tld()
+	self.tlds = require('fast-faker.data.tlds')
+	function self:tld()
+		return self.tlds[math.random(1, #self.tlds)]
+	end
+	return self:tld()
 end
 
 return Faker
