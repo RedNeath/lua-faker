@@ -102,7 +102,10 @@ end
 | `ssn()` | Generates a random social security number | 983-77-4987 |
 
 #### French
-No locale specific function
+| Name | Description | Example result |
+|------|-------------|----------------|
+| `siren()` | Generates a random company number | 123456789 |
+| `siret()` | Generates a random full company number | 12345678901234 |
 
 #### Portugese (Brazil)
 | Name | Description | Example result |

@@ -2,6 +2,19 @@
 
 local fr_FR = {}
 
+function fr_FR.siren()
+	local siren = math.random(0, 999999999)
+	
+	return string.format('%09d', siren)
+end
+
+function fr_FR.siret()
+	local siren = math.random(0, 999999999)
+	local extra = math.random(0, 99999)
+
+	return string.format('%09d%05d', siren, siret)
+end
+
 local accents = {
 	['à'] = 'a', ['á'] = 'a', ['â'] = 'a', ['ã'] = 'a', ['ä'] = 'a',
 	['À'] = 'A', ['Á'] = 'A', ['Â'] = 'A', ['Ã'] = 'A', ['Ä'] = 'A',
