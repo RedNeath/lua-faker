@@ -69,6 +69,7 @@ The country function generates a country name.
         <ul>
                 <li>- English (United States of America): <code>en_US</code></li>
                 <li>- French: <code>fr_FR</code></li>
+                <li>- French (Funny): <code>fr_FN</code></li>
                 <li>- Portugese (Brazil): <code>pt_BR</code></li>
         </ul>
 </details>
@@ -106,6 +107,9 @@ end
 |------|-------------|----------------|
 | `siren()` | Generates a random company number | 123456789 |
 | `siret()` | Generates a random full company number | 12345678901234 |
+
+#### French (funny)
+No specific function for locale.
 
 #### Portugese (Brazil)
 | Name | Description | Example result |
