@@ -12,7 +12,7 @@ function fr_FR.siret()
 	local siren = math.random(0, 999999999)
 	local extra = math.random(0, 99999)
 
-	return string.format('%09d%05d', siren, siret)
+	return string.format('%09d%05d', siren, extra)
 end
 
 local accents = {
