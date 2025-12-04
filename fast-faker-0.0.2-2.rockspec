@@ -1,9 +1,9 @@
 package = 'fast-faker'
-version = '0.0.2-1'
+version = '0.0.2-2'
 
 source = {
 	url = 'git://github.com/RedNeath/lua-faker.git',
-	tag = "0.0.2-1"
+	tag = "0.0.2-2"
 }
 
 description = {

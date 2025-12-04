@@ -75,7 +75,7 @@ function Faker:email(properties)
 	local username = self:firstname(properties) .. '.' .. string.gsub(self:surname(), '%s+', '')
 	local domain_name = self:company()
 	local tld = self:tld()
-	return string.gsub(string.lower(self.normalize(username)), "'", '') .. '@' .. string.gsub(string.lower(self.normalize(domain_name)), "'", '') '.' .. tld
+	return string.gsub(string.lower(self.normalize(username)), "'", '') .. '@' .. string.gsub(string.lower(self.normalize(domain_name)), "'", '') .. '.' .. tld
 end
 
 function Faker:country()
