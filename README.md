@@ -22,6 +22,7 @@ for i = 1, 10 do
         print(faker:state())
         print(faker:city())
         print(faker.ssn())
+        print(faker:date())
 end
 
 -- bbfchjdhaa
@@ -32,6 +33,7 @@ end
 -- Vermont
 -- Locustdale
 -- 983-77-4987
+-- 1972-12-05
 ```
 
 ### Name
@@ -60,6 +62,9 @@ The state function generates a state name.
 
 ### Country
 The country function generates a country name.
+
+### Date
+The date function generates a date.
 
 
 ## Locales

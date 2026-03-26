@@ -118,4 +118,13 @@ function Faker:tld()
 	return self:tld()
 end
 
+function Faker:date()
+	self.year_boundaries = require('fast-faker.data.' .. self.locale .. '.date_boundaries')
+	
+	local year = math.random(self.year_boundaries[1], self.year_boundaries[2])
+	local month = math.random(1, 12)
+	local day = math.random(1, 28)
+	return string.format('%04d-%02d-%02d', year, month, day)
+end
+
 return Faker
