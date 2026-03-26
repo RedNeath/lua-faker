@@ -1,9 +1,9 @@
 package = 'fast-faker'
-version = '0.0.2-4'
+version = '0.0.2-5'
 
 source = {
 	url = 'git://github.com/RedNeath/lua-faker.git',
-	tag = "0.0.2-4"
+	tag = "0.0.2-5"
 }
 
 description = {
@@ -33,6 +33,7 @@ build = {
 			['fast-faker.data.en_US.cities'] = 'faker/data/en_US/cities.lua',
 			['fast-faker.data.en_US.companies'] = 'faker/data/en_US/companies.lua',
 			['fast-faker.data.en_US.countries'] = 'faker/data/en_US/countries.lua',
+			['fast-faker.data.en_US.date_boundaries'] = 'faker/data/en_US/date_boundaries.lua',
 			['fast-faker.data.en_US.firstnames_female'] = 'faker/data/en_US/firstnames_female.lua',
 			['fast-faker.data.en_US.firstnames_male'] = 'faker/data/en_US/firstnames_male.lua',
 			['fast-faker.data.en_US.states'] = 'faker/data/en_US/states.lua',
@@ -40,6 +41,7 @@ build = {
 			['fast-faker.data.pt_BR.cities'] = 'faker/data/pt_BR/cities.lua',
 			['fast-faker.data.pt_BR.companies'] = 'faker/data/pt_BR/companies.lua',
 			['fast-faker.data.pt_BR.countries'] = 'faker/data/pt_BR/countries.lua',
+			['fast-faker.data.pt_BR.date_boundaries'] = 'faker/data/pt_BR/date_boundaries.lua',
 			['fast-faker.data.pt_BR.firstnames_female'] = 'faker/data/pt_BR/firstnames_female.lua',
 			['fast-faker.data.pt_BR.firstnames_male'] = 'faker/data/pt_BR/firstnames_male.lua',
 			['fast-faker.data.pt_BR.states'] = 'faker/data/pt_BR/states.lua',
@@ -47,6 +49,7 @@ build = {
 			['fast-faker.data.fr_FR.cities'] = 'faker/data/fr_FR/cities.lua',
 			['fast-faker.data.fr_FR.companies'] = 'faker/data/fr_FR/companies.lua',
 			['fast-faker.data.fr_FR.countries'] = 'faker/data/fr_FR/countries.lua',
+			['fast-faker.data.fr_FR.date_boundaries'] = 'faker/data/fr_FR/date_boundaries.lua',
 			['fast-faker.data.fr_FR.firstnames_female'] = 'faker/data/fr_FR/firstnames_female.lua',
 			['fast-faker.data.fr_FR.firstnames_male'] = 'faker/data/fr_FR/firstnames_male.lua',
 			['fast-faker.data.fr_FR.states'] = 'faker/data/fr_FR/states.lua',
@@ -54,6 +57,7 @@ build = {
 			['fast-faker.data.fr_FN.cities'] = 'faker/data/fr_FN/cities.lua',
 			['fast-faker.data.fr_FN.companies'] = 'faker/data/fr_FN/companies.lua',
 			['fast-faker.data.fr_FN.countries'] = 'faker/data/fr_FN/countries.lua',
+			['fast-faker.data.fr_FN.date_boundaries'] = 'faker/data/fr_FN/date_boundaries.lua',
 			['fast-faker.data.fr_FN.firstnames_female'] = 'faker/data/fr_FN/firstnames_female.lua',
 			['fast-faker.data.fr_FN.firstnames_male'] = 'faker/data/fr_FN/firstnames_male.lua',
 			['fast-faker.data.fr_FN.states'] = 'faker/data/fr_FN/states.lua',
